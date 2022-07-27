@@ -9,6 +9,7 @@ def download_video(link):
         return False
 
     try:
+        print("Started downloading video")
         stream = yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution')[-2]
         stream.download('downloaded_videos')
     except:
