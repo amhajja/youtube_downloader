@@ -19,7 +19,7 @@ jobs:
       - name: Enter into image and run tests
         run: |-
           image_id=$(docker images test --format "{{.ID}}")
-          docker run -d $image_id
+          docker run -t -d $image_id
           ps=$(docker ps --format "{{.ID}}")
           docker exec $ps sh -c "pip3 install pytest && python3 -m pytest -sv"
 
