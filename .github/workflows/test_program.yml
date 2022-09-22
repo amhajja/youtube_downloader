@@ -18,9 +18,9 @@ jobs:
         with:
           python-version: '3.8'
 
-      - name: Install System dependencies
-        run: |
-          sudo apt-get install tesseract-ocr libtesseract-dev libleptonica-dev
+      # - name: Install System dependencies
+      #   run: |
+      #     sudo apt-get install tesseract-ocr libtesseract-dev libleptonica-dev
 
       - name: Install Python dependencies
         run: |
